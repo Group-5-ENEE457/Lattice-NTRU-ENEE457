@@ -7,8 +7,8 @@ def remove_leading_zeros(polynomial: [int]) -> [int]:
     return polynomial
 
 def pad_to_fit(N:int, polynomial: [int]) -> [int]:
-    if len(polynomial) % N != 0:
-       polynomial = [0] * (N - len(polynomial)) + polynomial
+    if len(polynomial) % N:
+       polynomial = ([0] * (N - (len(polynomial)) % N)) + polynomial
     return polynomial
 
 

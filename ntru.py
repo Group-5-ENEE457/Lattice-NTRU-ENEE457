@@ -55,12 +55,17 @@ class NTRU():
             enc_block   = ciphertext[block*self.N:(block+1)*self.N]
             msg_block   = decryption(self.p, self.q, self.N, enc_block, self.f, self.f_p)
             msg_arr     += msg_block
-        return bits_to_string(decryption(self.p, self.q, self.N, ciphertext, self.f, self.f_p))
+        return bits_to_string(msg_arr)
 
 if __name__ == "__main__":
 
-    message = "abcdefghijjkl" # cant encrypt any message longer than 13 characters??
-    # message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    
+    message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" + \
+               "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" + \
+               "exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis" + \
+               "aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu" + \
+               "fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in" + \
+               "culpa qui officia deserunt mollit anim id est laborum."
 
     ntru = NTRU(100, 3, 97, 20)
     print(ntru.release_public_information()[0])
@@ -68,12 +73,3 @@ if __name__ == "__main__":
     m = ntru.decrypt_ciphertext(e)
     print(m)
     
-
-
-
-
-        
-        
-
-
-
