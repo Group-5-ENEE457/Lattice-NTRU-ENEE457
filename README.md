@@ -3,4 +3,4 @@
 This is a group project for UMD class ENEE457 demonstrating the implemntation of an NTRU lattice based encryption scheme in comparison to an RSA scheme. Both of which were created from the ground up, using references from various souces outlined below.
 
 # References
-Silverman, J. H. (n.d.). An Introduction to Lattices, Lattice Reduction, and Lattice-Based Cryptography.
+Silverman, J. H. (2020). An Introduction to Lattices, Lattice Reduction, and Lattice-Based Cryptography.
