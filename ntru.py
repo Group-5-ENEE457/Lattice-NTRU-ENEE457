@@ -68,8 +68,6 @@ if __name__ == "__main__":
                "culpa qui officia deserunt mollit anim id est laborum."
 
     ntru = NTRU(100, 3, 97, 20)
-    print(ntru.release_public_information()[0])
     e = ntru.encrypt_plaintext(message)
     m = ntru.decrypt_ciphertext(e)
     print(m)
-    
